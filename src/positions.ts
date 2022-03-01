@@ -2,7 +2,7 @@ export const hasWindow = typeof window === 'object';
 export const hasDocument = typeof document !== 'undefined' && document.documentElement;
 
 export const documentHeight = () => {
-    if (document) {
+    if (hasDocument) {
         const $body = document.body;
         const $html = document.documentElement;
 

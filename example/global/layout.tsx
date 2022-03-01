@@ -2,8 +2,7 @@ import * as React from "react";
 import Head from 'next/head';
 import { useState } from "react";
 import Header from "../components/header";
-import Navigation from "../components/navigation";
-import { StyledPage } from "../pages/page.styles";
+import { StyledPage } from "./page.styles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme.styles";
 import { GlobalStyle } from "./global.styles";
@@ -28,7 +27,6 @@ const Layout: React.FC = ({ children }) => {
                 </Head>
                 <main>
                     <Header updateNavOpen={updateNavOpen} />
-                    {/* <Navigation open={true} updateNavOpen={updateNavOpen} /> */}
                     <StyledPage>
                         {children}
                     </StyledPage>

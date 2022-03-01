@@ -3,7 +3,7 @@ import ImageComponent from '../components/image';
 import { StyledImageGrid } from '../components/imageGrid.styles';
 import { StyledPanel } from '../components/panel.styles';
 import { Header4, Paragraph } from '../global/typography';
-import { StyledPage } from './page.styles';
+import { StyledPage } from '../global/page.styles';
 
 const Home: NextPage = () => {
 
@@ -11,8 +11,8 @@ const Home: NextPage = () => {
     <StyledPage>
       <StyledPanel>
         <Header4>Directions</Header4>
-        <Paragraph>Click an Image to See It's Calcuated Position</Paragraph>
-        <Paragraph>Click the 'Refresh' button to refresh all calculations</Paragraph>
+        <Paragraph>Click an Image to See It&aposs Calcuated Position</Paragraph>
+        <Paragraph>Click the &aposRefresh&apos button to refresh all calculations</Paragraph>
       </StyledPanel>
       <StyledImageGrid columns={2}>
         <ImageComponent isTargetElement={true} />
