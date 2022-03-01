@@ -34,7 +34,7 @@
         "exampleBuild": "npm run build -w example",
         "exampleProd": "npm run start -w example",
         "postpublish": "npm run publish-npm",
-        "publish-npm": "npm publish --access public --ignore-scripts --@3nder:registry='https://registry.npmjs.org'"
+        "publish-npm": "npm publish --access public --ignore-scripts --@speaker-ender:registry='https://registry.npmjs.org'"
     },
     "repository": {
         "type": "git",
