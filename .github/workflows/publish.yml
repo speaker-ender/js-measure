@@ -13,8 +13,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Dependancies
-        run: npm install
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
       - name: Build Rollup
         run: npm run build
       - name: Set package registry
