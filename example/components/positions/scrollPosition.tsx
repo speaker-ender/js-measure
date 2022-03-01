@@ -13,8 +13,8 @@ const ScrollPosition: React.FC = () => {
     return (
         <div>
             <Header3>Scroll Positions</Header3>
-            <Paragraph><b>Scroll Distance From Top of Page: </b>{scrollPosition.scrollTop}px</Paragraph>
-            <Paragraph><b>Scrol Distance from Left of Page: </b>{scrollPosition.scrollLeft}px</Paragraph>
+            <Paragraph><b>scrollTop(): </b>{scrollPosition.scrollTop}px</Paragraph>
+            <Paragraph><b>scrollLeft(): </b>{scrollPosition.scrollLeft}px</Paragraph>
         </div>
     )
 }

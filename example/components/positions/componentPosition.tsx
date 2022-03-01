@@ -3,12 +3,15 @@ import { Header3, Paragraph } from "../../global/typography";
 import { usePositionsState } from "../../hooks/usePositionsState";
 
 export interface IComponentPosition {
+    height: number,
+    width: number,
     topPosition: number,
     relativeTopPosition: number,
     rightPosition: number,
     bottomPosition: number,
+    relativeBottomPosition: number,
     leftPosition: number,
-    inViewPort: boolean,
+    inViewport: boolean,
 }
 
 const ComponentPosition: React.FC = () => {
@@ -17,13 +20,15 @@ const ComponentPosition: React.FC = () => {
     return (
         <div>
             <Header3>Component Positions</Header3>
-            <Paragraph><b>Component Distance from Top of Viewport: </b>{componentPosition.topPosition}px</Paragraph>
-            <Paragraph><b>Component Distance from Top of Page: </b>{componentPosition.relativeTopPosition}px</Paragraph>
-            <Paragraph><b>Component Distance from Right of Page or container: </b>{componentPosition.rightPosition}px</Paragraph>
-            <Paragraph><b>Distance from Bottom of Element to Top of Viewport: </b>{componentPosition.bottomPosition}px</Paragraph>
-            <Paragraph><b>Distance from Left of Page or container: </b>{componentPosition.leftPosition}px</Paragraph>
-            <Paragraph><b>Distance from Left of Page or container: </b>{componentPosition.leftPosition}px</Paragraph>
-            <Paragraph><b>Element Is In Viewport: </b>{componentPosition.inViewPort ? 'true' : 'false'}</Paragraph>
+            <Paragraph><b>height(): </b>{componentPosition.height}px</Paragraph>
+            <Paragraph><b>width(): </b>{componentPosition.width}px</Paragraph>
+            <Paragraph><b>topPosition(): </b>{componentPosition.topPosition}px</Paragraph>
+            <Paragraph><b>relativeTopPosition(): </b>{componentPosition.relativeTopPosition}px</Paragraph>
+            <Paragraph><b>rightPosition(): </b>{componentPosition.rightPosition}px</Paragraph>
+            <Paragraph><b>bottomPosition(): </b>{componentPosition.bottomPosition}px</Paragraph>
+            <Paragraph><b>relativeBottomPosition: </b>{componentPosition.relativeBottomPosition}px</Paragraph>
+            <Paragraph><b>leftPosition(): </b>{componentPosition.leftPosition}px</Paragraph>
+            <Paragraph><b>inViewport(): </b>{componentPosition.inViewport ? 'true' : 'false'}</Paragraph>
         </div>
     )
 }

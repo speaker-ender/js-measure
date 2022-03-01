@@ -48,8 +48,8 @@ export const scrollLeft = (element?: Element) => {
         : 0);
 };
 
-export const height = (element: Element | null) => {
-    return !!element ? element.getBoundingClientRect().height : 0;
+export const height = (element: Element) => {
+    return element.getBoundingClientRect().height;
 };
 
 export const width = (element: Element) => {

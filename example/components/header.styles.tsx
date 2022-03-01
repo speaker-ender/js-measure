@@ -21,9 +21,8 @@ export const StyledHeader = styled.div<IStyledHeader>`
 `;
 
 export const StyledHeaderTitle = styled(Header2)`
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 4;
     grid-row: 1;
     margin: 0.5rem;
-    width: 50vw;
     mix-blend-mode: invert;
 `;

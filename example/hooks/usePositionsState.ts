@@ -23,18 +23,22 @@ export const getScrollPosition = () => {
 export const getWindowSize = () => {
     return {
         windowHeight: positions.windowHeight(),
-        windowWidth: positions.windowWidth()
+        windowWidth: positions.windowWidth(),
+        documentHeight: positions.documentHeight()
     }
 }
 
 const getElementPositions = (element: HTMLElement | null) => {
     return {
+        height: element ? positions.height(element) : 0,
+        width: element ? positions.width(element) : 0,
         topPosition: element ? positions.topPosition(element) : 0,
         relativeTopPosition: element ? positions.relativeTopPosition(element) : 0,
         rightPosition: element ? positions.rightPosition(element) : 0,
         bottomPosition: element ? positions.bottomPosition(element) : 0,
+        relativeBottomPosition: element ? positions.relativeBottomPosition(element) : 0,
         leftPosition: element ? positions.leftPosition(element) : 0,
-        inViewPort: element ? positions.inViewport(element) : false,
+        inViewport: element ? positions.inViewport(element) : false,
     }
 }
 

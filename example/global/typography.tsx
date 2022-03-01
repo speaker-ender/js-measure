@@ -20,7 +20,7 @@ export const Header1 = styled.h1`
 
 export const Header2Style = css`
     font-family: ${FONTS.main};
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
 `
 
@@ -31,7 +31,7 @@ export const Header2 = styled.h2`
 
 export const Header3Style = css`
     font-family: ${FONTS.mainBold};
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 `
 
@@ -62,7 +62,7 @@ export const Header5 = styled.h5`
 
 export const ParagraphTextStyle = css`
     font-family: ${FONTS.main};
-    font-size: 0.7rem; 
+    font-size: 0.8rem; 
 `
 
 export const Paragraph = styled.p`

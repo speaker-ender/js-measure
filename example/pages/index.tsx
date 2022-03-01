@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import ImageComponent from '../components/image';
 import { StyledImageGrid } from '../components/imageGrid.styles';
-import { StyledComponentPositionElement } from '../components/positions/componentPosition.styles';
+import { StyledPanel } from '../components/panel.styles';
 import { Header4, Paragraph } from '../global/typography';
 import { StyledPage } from './page.styles';
 
@@ -9,26 +9,43 @@ const Home: NextPage = () => {
 
   return (
     <StyledPage>
-      <Header4>Directions</Header4>
-      <Paragraph>Click an Image to See It's Calcuated Position</Paragraph>
-      <Paragraph>Click the 'Refresh' button to refresh all calculations</Paragraph>
-      <StyledComponentPositionElement>
-        <ImageComponent isTargetElement={true}></ImageComponent>
-      </StyledComponentPositionElement>
-      <StyledImageGrid>
+      <StyledPanel>
+        <Header4>Directions</Header4>
+        <Paragraph>Click an Image to See It's Calcuated Position</Paragraph>
+        <Paragraph>Click the 'Refresh' button to refresh all calculations</Paragraph>
+      </StyledPanel>
+      <StyledImageGrid columns={2}>
+        <ImageComponent isTargetElement={true} />
         <ImageComponent />
-        <ImageComponent />
-        <ImageComponent />
-        <ImageComponent />
-        <ImageComponent />
-        <ImageComponent />
+        <StyledImageGrid columns={2}>
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+        </StyledImageGrid>
+        <StyledImageGrid columns={4} rows={4}>
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+          <ImageComponent />
+        </StyledImageGrid>
+      </StyledImageGrid>
+      <StyledImageGrid columns={1}>
         <ImageComponent />
         <ImageComponent />
       </StyledImageGrid>
-      <ImageComponent />
-      <ImageComponent />
-      <ImageComponent />
-      <ImageComponent />
     </StyledPage>
   )
 }

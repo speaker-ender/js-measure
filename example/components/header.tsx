@@ -10,7 +10,7 @@ const Header: React.FC<IHeader> = (props) => {
     return (
         <StyledHeader>
             <StyledHeaderTitle>
-                JS Position Helpers
+                Position Helpers
             </StyledHeaderTitle>
         </StyledHeader>
     )

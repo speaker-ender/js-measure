@@ -18,14 +18,18 @@ export const theme = {
     skyBlueHalfOpacity: `rgb(48, 194, 247, ${OPACITY.half})`,
     skyBlueLight: '#80ddff',
     skyBlueDark: '#0e93c4',
-    greyBlue: '#016097',
+    greyBlue: '#6fa0bd',
+    greyBlueLight: '#016097',
+    greyBlueDark: '#073b58',
     blood: 'rgb(216, 0, 0)',
     bloodPartialOpacity: `rgb(216, 0, 0, ${OPACITY.partial})`,
     bloodMediumOpacity: `rgb(216, 0, 0, ${OPACITY.medium})`,
     bloodHalfOpacity: `rgb(216, 0, 0, ${OPACITY.half})`,
     bloodLight: '#ff3e3e',
     bloodDark: '#6b0101',
-    green: '#0afc47',
+    green: 'rgb(10, 252, 71)',
+    greenLight: 'rgb(94, 253, 134)',
+    greenDark: 'rgb(2, 196, 50)',
     black: '#000000',
     white: '#ffffff',
     dust: 'rgb(48, 48, 48)',
@@ -58,8 +62,8 @@ export const lightThemeProps = css`
   --primary--light: ${({ theme }) => theme.colors.skyBlueLight};
   --primary--dark: ${({ theme }) => theme.colors.skyBlueDark};
   --secondary: ${({ theme }) => theme.colors.greyBlue};
-  --secondary--light: ${({ theme }) => theme.colors.greyBlue};
-  --secondary--dark: ${({ theme }) => theme.colors.greyBlue};
+  --secondary--light: ${({ theme }) => theme.colors.greyBlueLight};
+  --secondary--dark: ${({ theme }) => theme.colors.greyBlueDark};
   --tertiary: ${({ theme }) => theme.colors.sand};
   --tertiary--partial-opacity: ${({ theme }) => theme.colors.sandPartialOpacity};
   --tertiary--medium-opacity: ${({ theme }) => theme.colors.sandMediumOpacity};
@@ -78,8 +82,8 @@ export const darkThemeProps = css`
   --primary--light: ${({ theme }) => theme.colors.bloodLight};
   --primary--dark: ${({ theme }) => theme.colors.bloodDark};
   --secondary: ${({ theme }) => theme.colors.green};
-  --secondary--light: ${({ theme }) => theme.colors.green};
-  --secondary--dark: ${({ theme }) => theme.colors.green};
+  --secondary--light: ${({ theme }) => theme.colors.greenLight};
+  --secondary--dark: ${({ theme }) => theme.colors.greenDark};
   --tertiary: ${({ theme }) => theme.colors.dust};
   --tertiary--partial-opacity: ${({ theme }) => theme.colors.dustPartialOpacity};
   --tertiary--medium-opacity: ${({ theme }) => theme.colors.dustMediumOpacity};
