@@ -7,7 +7,7 @@
         "dist"
     ],
     "description": "Basic JS Position Tools For HTML Elements",
-    "version": "v0.1.1",
+    "version": "v0.1.2",
     "author": "3nder",
     "dependencies": {
         "cd": "^0.3.3",
