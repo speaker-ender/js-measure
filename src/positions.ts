@@ -72,6 +72,10 @@ export const bottomPosition = (element: Element) => {
     return rect.bottom + scrollTop();
 };
 
+export const relativeBottomPosition = (element: Element) => {
+    return element.getBoundingClientRect().bottom;
+};
+
 export const leftPosition = (element: Element, container?: Element) => {
     const rect = element.getBoundingClientRect();
     const scrollLeftPosition =
