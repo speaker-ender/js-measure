@@ -2,12 +2,12 @@
     "name": "@speaker-ender/js-position-helpers",
     "main": "dist/index.umd.min.js",
     "module": "dist/index.es.js",
-    "types": "dist/src/positions.d.ts",
+    "types": "dist/index.d.ts",
     "files": [
         "dist"
     ],
     "description": "Basic JS Position Tools For HTML Elements",
-    "version": "0.1.0",
+    "version": "v0.1.1",
     "author": "3nder",
     "dependencies": {
         "cd": "^0.3.3",
