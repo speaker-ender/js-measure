@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useEffect } from "react";
+import { StyledButton } from "../../global/button.styles";
 import { usePositionsState } from "../../hooks/usePositionsState";
 import ComponentPosition from "./componentPosition";
 import { StyledPositionsContainer } from "./positionsContainer.styles";
@@ -7,7 +8,7 @@ import ScrollPosition from "./scrollPosition";
 import WindowSize from "./windowSize";
 
 const PositionsContainer: React.FC = () => {
-    const { scrollPosition, windowSize, refreshPositions, targetElement } = usePositionsState();
+    const { refreshPositions, targetElement } = usePositionsState();
 
     useEffect(() => {
         !!targetElement && refreshPositions();
@@ -20,7 +21,7 @@ const PositionsContainer: React.FC = () => {
             <WindowSize />
             <ScrollPosition />
             <ComponentPosition />
-            <button onClick={() => refreshPositions()}>Refresh</button>
+            <StyledButton onClick={() => refreshPositions()}>Refresh</StyledButton>
         </StyledPositionsContainer>
     )
 }

@@ -28,7 +28,7 @@ const Layout: React.FC = ({ children }) => {
                 </Head>
                 <main>
                     <Header updateNavOpen={updateNavOpen} />
-                    <Navigation open={true} updateNavOpen={updateNavOpen} />
+                    {/* <Navigation open={true} updateNavOpen={updateNavOpen} /> */}
                     <StyledPage>
                         {children}
                     </StyledPage>

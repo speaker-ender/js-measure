@@ -14,7 +14,8 @@ export const Header1Style = css`
 `
 
 export const Header1 = styled.h1`
-    ${Header1Style}
+    ${Header1Style};
+    color: var(--text);
 `;
 
 export const Header2Style = css`
@@ -24,7 +25,8 @@ export const Header2Style = css`
 `
 
 export const Header2 = styled.h2`
-    ${Header2Style}
+    ${Header2Style};
+    color: var(--text);
 `;
 
 export const Header3Style = css`
@@ -34,7 +36,8 @@ export const Header3Style = css`
 `
 
 export const Header3 = styled.h3`
-    ${Header3Style}
+    ${Header3Style};
+    color: var(--text);
 `;
 
 export const Header4Style = css`
@@ -43,7 +46,8 @@ export const Header4Style = css`
 `
 
 export const Header4 = styled.h4`
-    ${Header4Style}
+    ${Header4Style};
+    color: var(--text);
 `;
 
 export const Header5Style = css`
@@ -52,7 +56,8 @@ export const Header5Style = css`
 `
 
 export const Header5 = styled.h5`
-    ${Header5Style}
+    ${Header5Style};
+    color: var(--text);
 `;
 
 export const ParagraphTextStyle = css`
@@ -62,6 +67,7 @@ export const ParagraphTextStyle = css`
 
 export const Paragraph = styled.p`
     ${ParagraphTextStyle}
+    color: var(--text);
 `
 
 export const StyledLabel = styled.label`

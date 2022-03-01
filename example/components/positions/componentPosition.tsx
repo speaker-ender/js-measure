@@ -23,7 +23,7 @@ const ComponentPosition: React.FC = () => {
             <Paragraph><b>Distance from Bottom of Element to Top of Viewport: </b>{componentPosition.bottomPosition}px</Paragraph>
             <Paragraph><b>Distance from Left of Page or container: </b>{componentPosition.leftPosition}px</Paragraph>
             <Paragraph><b>Distance from Left of Page or container: </b>{componentPosition.leftPosition}px</Paragraph>
-            <Paragraph><b>Element Is In Viewport: </b>{componentPosition.inViewPort || 'false'}</Paragraph>
+            <Paragraph><b>Element Is In Viewport: </b>{componentPosition.inViewPort ? 'true' : 'false'}</Paragraph>
         </div>
     )
 }

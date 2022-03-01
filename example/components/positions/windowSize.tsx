@@ -12,7 +12,7 @@ const WindowSize: React.FC = () => {
 
     return (
         <div>
-            <Header3>Component Positions</Header3>
+            <Header3>Window Size</Header3>
             <Paragraph><b>Window Width: </b>{windowSize.windowWidth}px</Paragraph>
             <Paragraph><b>Window Height: </b>{windowSize.windowHeight}px</Paragraph>
         </div>

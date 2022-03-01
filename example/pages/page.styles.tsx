@@ -4,5 +4,5 @@ interface IStyledPage {
 }
 
 export const StyledPage = styled.div<IStyledPage>`
-    margin-top: 55px;
+    padding: 55px 25px;
 `;

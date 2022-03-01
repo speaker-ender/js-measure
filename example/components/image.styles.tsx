@@ -8,5 +8,7 @@ export const StyledImage = styled.div<IStyledImage>`
     position: relative;
     width: 100%;
     height: 100%;
-    border: ${p => p.isTarget ? 'solid 2px blue' : ''};
+    outline: ${p => p.isTarget ? `solid 2px var(--primary--light)` : ''};
+    background: white;
+    backdrop-filter: invert();
 `;
