@@ -19,7 +19,7 @@ export const theme = {
     skyBlueLight: '#80ddff',
     skyBlueDark: '#0e93c4',
     greyBlue: '#016097',
-    blood: '#rgb(216, 0, 0)',
+    blood: 'rgb(216, 0, 0)',
     bloodPartialOpacity: `rgb(216, 0, 0, ${OPACITY.partial})`,
     bloodMediumOpacity: `rgb(216, 0, 0, ${OPACITY.medium})`,
     bloodHalfOpacity: `rgb(216, 0, 0, ${OPACITY.half})`,

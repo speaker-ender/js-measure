@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import * as React from "react";
 import { StyledHeader, StyledHeaderTitle } from "./header.styles";
 
@@ -8,14 +7,10 @@ interface IHeader {
 
 const Header: React.FC<IHeader> = (props) => {
 
-    // const handleClick = () => {
-    //     props.updateNavOpen()
-    // }
-
     return (
         <StyledHeader>
             <StyledHeaderTitle>
-                JS Positions
+                JS Position Helpers
             </StyledHeaderTitle>
         </StyledHeader>
     )
