@@ -1,4 +1,6 @@
 export {
+    hasDocument,
+    hasWindow,
     documentHeight,
     windowWidth,
     windowHeight,
