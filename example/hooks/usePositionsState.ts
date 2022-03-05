@@ -1,7 +1,7 @@
 import create from "zustand";
 import { IScrollPosition } from "../components/positions/scrollPosition";
 import { IWindowSize } from "../components/positions/windowSize";
-import * as positions from '../../src/measure';
+import * as measure from '../../src/measure';
 import { IComponentPosition } from "../components/positions/componentPosition";
 
 interface IPositionsState {
@@ -15,30 +15,30 @@ interface IPositionsState {
 
 export const getScrollPosition = () => {
     return {
-        scrollTop: positions.scrollTop(),
-        scrollLeft: positions.scrollLeft()
+        scrollTop: measure.scrollTopDistance(),
+        scrollLeft: measure.scrollLeftDistance()
     }
 }
 
 export const getWindowSize = () => {
     return {
-        windowHeight: positions.windowHeight(),
-        windowWidth: positions.windowWidth(),
-        documentHeight: positions.documentHeight()
+        windowHeight: measure.windowHeight(),
+        windowWidth: measure.windowWidth(),
+        documentHeight: measure.documentHeight()
     }
 }
 
 const getElementPositions = (element: HTMLElement | null) => {
     return {
-        height: element ? positions.height(element) : 0,
-        width: element ? positions.width(element) : 0,
-        topPosition: element ? positions.topPosition(element) : 0,
-        relativeTopPosition: element ? positions.relativeTopPosition(element) : 0,
-        rightPosition: element ? positions.rightPosition(element) : 0,
-        bottomPosition: element ? positions.bottomPosition(element) : 0,
-        relativeBottomPosition: element ? positions.relativeBottomPosition(element) : 0,
-        leftPosition: element ? positions.leftPosition(element) : 0,
-        inViewport: element ? positions.inViewport(element) : false,
+        height: element ? measure.height(element) : 0,
+        width: element ? measure.width(element) : 0,
+        topPosition: element ? measure.topEdgeDistance(element) : 0,
+        relativeTopPosition: element ? measure.topEdgeDistance(element, 'document') : 0,
+        rightPosition: element ? measure.rightEdgeDistance(element) : 0,
+        bottomPosition: element ? measure.bottomEdgeDistance(element) : 0,
+        relativeBottomPosition: element ? measure.bottomEdgeDistance(element, 'document') : 0,
+        leftPosition: element ? measure.leftEdgeDistance(element) : 0,
+        inViewport: element ? measure.inViewport(element) : false,
     }
 }
 
