@@ -1,7 +1,7 @@
 import create from "zustand";
 import { IScrollPosition } from "../components/positions/scrollPosition";
 import { IWindowSize } from "../components/positions/windowSize";
-import * as positions from '../../src/positions';
+import * as positions from '../../src/measure';
 import { IComponentPosition } from "../components/positions/componentPosition";
 
 interface IPositionsState {

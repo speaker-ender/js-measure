@@ -1,13 +1,13 @@
 {
-    "name": "@speaker-ender/js-position-helpers",
+    "name": "@speaker-ender/js-measure",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "files": [
         "dist"
     ],
-    "description": "Basic JS Position Tools For HTML Elements",
-    "version": "v0.1.6",
+    "description": "DOM Measurement Tools",
+    "version": "v0.2.0",
     "author": "3nder",
     "dependencies": {
         "cd": "^0.3.3",

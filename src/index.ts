@@ -4,15 +4,13 @@ export {
     documentHeight,
     windowWidth,
     windowHeight,
-    scrollTop,
-    scrollLeft,
+    scrollTopDistance,
+    scrollLeftDistance,
     height,
     width,
-    topPosition,
-    relativeTopPosition,
-    bottomPosition,
-    relativeBottomPosition,
-    leftPosition,
-    rightPosition,
+    topEdgeDistance,
+    bottomEdgeDistance,
+    leftEdgeDistance,
+    rightEdgeDistance,
     inViewport
-} from './positions';
+} from './measure';
