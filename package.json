@@ -37,10 +37,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/speaker-ender/JS-Position-Helpers"
+        "url": "git://github.com/speaker-ender/JS-Measure"
     },
     "bugs": {
-        "url": "https://github.com/speaker-ender/JS-Position-Helpers/issues"
+        "url": "https://github.com/speaker-ender/JS-Measure/issues"
     },
     "workspaces": [
         "example"
