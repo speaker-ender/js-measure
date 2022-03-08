@@ -56,13 +56,13 @@ export const width = (element: Element) => {
     return element.getBoundingClientRect().width;
 };
 
-export const topEdgeDistance = (element: Element, relativeTo?: 'document' | Element) => {
+export const topEdgeDistance = (element: Element, relativeTo: ('viewport' | 'document' | Element) = 'viewport') => {
     const rect = element.getBoundingClientRect();
 
     switch (relativeTo) {
-        case undefined:
-            return rect.top + scrollTopDistance();
         case 'document':
+            return rect.top + scrollTopDistance();
+        case 'viewport':
             return element.getBoundingClientRect().top;
         default:
             const relativeRect = relativeTo.getBoundingClientRect();
@@ -70,13 +70,13 @@ export const topEdgeDistance = (element: Element, relativeTo?: 'document' | Elem
     }
 };
 
-export const bottomEdgeDistance = (element: Element, relativeTo?: 'document' | Element) => {
+export const bottomEdgeDistance = (element: Element, relativeTo: ('viewport' | 'document' | Element) = 'viewport') => {
     const rect = element.getBoundingClientRect();
 
     switch (relativeTo) {
-        case undefined:
-            return rect.bottom + scrollTopDistance();
         case 'document':
+            return rect.bottom + scrollTopDistance();
+        case 'viewport':
             return element.getBoundingClientRect().bottom;
         default:
             const relativeRect = relativeTo.getBoundingClientRect();
@@ -84,18 +84,18 @@ export const bottomEdgeDistance = (element: Element, relativeTo?: 'document' | E
     }
 };
 
-export const leftEdgeDistance = (element: Element, relativeTo?: 'document' | Element) => {
+export const leftEdgeDistance = (element: Element, relativeTo: ('viewport' | 'document' | Element) = 'viewport') => {
     const rect = element.getBoundingClientRect();
 
 
     switch (relativeTo) {
-        case undefined:
+        case 'document':
             const scrollLeftPosition =
-                relativeTo ? scrollLeftDistance(relativeTo) : (hasWindow && hasDocument
+                relativeTo ? scrollLeftDistance() : (hasWindow && hasDocument
                     ? window.pageXOffset || document.documentElement.scrollLeft
                     : 0);
             return rect.left + scrollLeftPosition;
-        case 'document':
+        case 'viewport':
             return rect.left;
         default:
             const relativeRect = relativeTo.getBoundingClientRect();
@@ -103,14 +103,14 @@ export const leftEdgeDistance = (element: Element, relativeTo?: 'document' | Ele
     }
 };
 
-export const rightEdgeDistance = (element: Element, relativeTo?: 'document' | Element) => {
+export const rightEdgeDistance = (element: Element, relativeTo: ('viewport' | 'document' | Element) = 'viewport') => {
     const rect = element.getBoundingClientRect();
 
     switch (relativeTo) {
-        case undefined:
+        case 'document':
             const widthOfWindow = windowWidth();
             return widthOfWindow - rect.right;
-        case 'document':
+        case 'viewport':
             return rect.right;
         default:
             const relativeRect = relativeTo.getBoundingClientRect();
