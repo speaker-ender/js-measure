@@ -7,7 +7,7 @@
         "dist"
     ],
     "description": "DOM Measurement Tools",
-    "version": "v0.2.0",
+    "version": "v0.2.1",
     "author": "3nder",
     "dependencies": {
         "cd": "^0.3.3",
