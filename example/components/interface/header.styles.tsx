@@ -12,7 +12,7 @@ export const StyledHeader = styled.div<IStyledHeader>`
     ${InterfaceBackgroundStyles}
     position: sticky;
     display: grid;
-    grid-template-columns: 25px repeat(4, 1fr) 25px;
+    grid-template-columns: 25px repeat(3, 1fr) min-content 25px;
     grid-template-rows: 1fr;
     column-gap: 25px;
     row-gap: 25px;
@@ -25,7 +25,7 @@ export const StyledHeader = styled.div<IStyledHeader>`
 `;
 
 export const StyledHeaderTitle = styled(Header2)`
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 1;
 
     a {

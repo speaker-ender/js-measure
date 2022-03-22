@@ -13,11 +13,13 @@ export const StyledAppLayout = styled.div<IStyledAppLayout>`
     display: grid;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
     grid: "header"
         "navigation"
         "content"
         "footer";
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
     align-content: center;
     grid-auto-flow: dense;
 

@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import DescriptionLayout from '../../components/layouts/documentation/description.layout';
 
-const TopEdgeDistance: NextPage = () => {
+const RightEdgeDistance: NextPage = () => {
 
     return (
         <DescriptionLayout
-            functionName='topEdgeDistance'
+            functionName='rightEdgeDistance'
             parameters={[
                 {
                     name: 'element',
@@ -18,9 +18,9 @@ const TopEdgeDistance: NextPage = () => {
                 }
             ]}
             description={[
-                'Fetches the distance of the top of the element passed to the function from the top of the viewport.', 'If `relativeTo` is passed `document`, it will use the distance from the top of the document.', 'If you pass any Element to `relativeTo`, it will return the distance between the top of `element` and the top of `relativeTo`.'
+                'Fetches the distance of the right of the element passed to the function from the top of the viewport.', 'If `relativeTo` is passed `document`, it will use the distance from the top of the document.', 'If you pass any Element to `relativeTo`, it will return the distance between the right of `element` and the right of `relativeTo`.'
             ]} />
     )
 }
 
-export default TopEdgeDistance
+export default RightEdgeDistance

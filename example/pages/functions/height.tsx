@@ -13,7 +13,8 @@ const Height: NextPage = () => {
         },
         {
           name: 'includeMargin',
-          type: 'boolean'
+          type: 'boolean',
+          optional: true,
         }
       ]}
       description={[

@@ -16,6 +16,7 @@ export const Header1Style = css`
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    overflow-wrap: break-word;
 `
 
 export const Header1 = styled.h1`
@@ -27,6 +28,7 @@ export const Header2Style = css`
     font-family: ${FONTS.main};
     font-size: 2.5rem;
     text-transform: uppercase;
+    overflow-wrap: break-word;
 `
 
 export const Header2 = styled.h2`
@@ -38,6 +40,7 @@ export const Header3Style = css`
     font-family: ${FONTS.mainBold};
     font-size: 1.5rem;
     text-transform: uppercase;
+    overflow-wrap: break-word;
 `
 
 export const Header3 = styled.h3`
@@ -48,6 +51,7 @@ export const Header3 = styled.h3`
 export const Header4Style = css`
     font-family: ${FONTS.mainBold};
     font-size: 1.5rem;
+    overflow-wrap: break-word;
 `
 
 export const Header4 = styled.h4`
@@ -58,6 +62,7 @@ export const Header4 = styled.h4`
 export const Header5Style = css`
     font-family: ${FONTS.mainBold};
     font-size: 0.8rem;
+    overflow-wrap: break-word;
 `
 
 export const Header5 = styled.h5`

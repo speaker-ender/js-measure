@@ -13,6 +13,7 @@ export const StyledLibrary = styled.div<IStyledLibrary>`
     display: grid;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
     grid: "header header"
         "navigation navigation"
         "content content"
