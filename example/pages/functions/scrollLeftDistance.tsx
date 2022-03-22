@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import DescriptionLayout from '../../components/layouts/documentation/description.layout';
 
-const WindowWidth: NextPage = () => {
+const ScrollLeftDistance: NextPage = () => {
 
     return (
-        <DescriptionLayout functionName='windowHeight' description={[
-            'Fetches the width of the window.',
+        <DescriptionLayout functionName='scrollLeftDistance' description={[
+            'Fetches the distance of the viewport from the top of the page.',
             'Returns `0` if the window and document element do not exist.'
         ]} />
     )
 }
 
-export default WindowWidth
+export default ScrollLeftDistance
