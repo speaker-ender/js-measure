@@ -8,7 +8,7 @@ const Home: NextPage = () => {
 
   return (
     <StyledPage>
-      <Header2>JS Position Helpers</Header2>
+      <Header2>JS Measure</Header2>
       <StyledPanel>
         <Paragraph text='This package includes helper functions to querying the DOM more user friendly.' />
       </StyledPanel>
