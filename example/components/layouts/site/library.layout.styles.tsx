@@ -17,6 +17,7 @@ export const StyledLibrary = styled.div<IStyledLibrary>`
         "navigation navigation"
         "content content"
         "footer footer";
+    grid-template-rows: min-content min-content 1fr min-content;
     align-content: center;
     grid-auto-flow: dense;
 
@@ -25,7 +26,7 @@ export const StyledLibrary = styled.div<IStyledLibrary>`
         "navigation content"
         "navigation footer";
         grid-template-columns: 25% 1fr; 
-
+        grid-template-rows: min-content 1fr min-content;
     }
 
     & ${StyledHeader} {
