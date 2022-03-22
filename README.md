@@ -27,10 +27,24 @@ Fetches the distance of the viewport from the left of the page or the distance o
 Returns `0` if the window and document element do not exist
 
 ### `height(element, includeMargin)`
-Fetches the height of the element passed to the function
+Fetches the height of the element passed to the function.
+The second parameter can be used to fetch the total height with any margins
 
-### `height(element, includeMargin)`
+### `rawHeight(element)`
+This is the raw height function for maximum performance
+
+### `rawHeightWithMargin(element)`
+This is the raw height with margin function for maximum performance
+
+### `width(element, includeMargin)`
 Fetches the width of the element passed to the function
+The second parameter can be used to fetch the total width with any margins
+
+### `rawWidth(element)`
+This is the raw height function for maximum performance
+
+### `rawWidthWithMargin(element)`
+This is the raw width with margin function for maximum performance
 
 ### `topEdgeDistance(element: Element, relativeTo?: 'document' | Element)`
 Fetches the distance of the top of the element passed to the function from the top of the viewport. If `relativeTo` is passed `document`, it will use the distance from the top of the document. If you pass any Element to `relativeTo`, it will return the distance between the top of `element` and the top of `relativeTo`.

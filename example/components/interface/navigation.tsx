@@ -27,41 +27,55 @@ const Navigation: React.FC<INavigation> = (props) => {
                     </StyledNavigationLink>
                     <StyledNavigationHeader>Functions</StyledNavigationHeader>
                     <StyledNavigationLink>
-                        <Link href={'/functions/documentHeight'}>documentHeight()</Link>
+                        <Link href={'/functions/documentHeight'}>documentHeight</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/windowHeight'}>windowHeight()</Link>
+                        <Link href={'/functions/windowHeight'}>windowHeight</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/windowWidth'}>windowWidth()</Link>
+                        <Link href={'/functions/windowWidth'}>windowWidth</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/scrollTopDistance'}>scrollTopDistance()</Link>
+                        <Link href={'/functions/scrollTopDistance'}>scrollTopDistance</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/scrollLeftDistance'}>scrollLeftDistance()</Link>
+                        <Link href={'/functions/scrollLeftDistance'}>scrollLeftDistance</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/height'}>height()</Link>
+                        <Link href={'/functions/height'}>height</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/width'}>width()
+                        <Link href={'/functions/rawHeight'}>rawHeight</Link>
+                    </StyledNavigationLink>
+                    <StyledNavigationLink>
+                        <Link href={'/functions/rawHeightWithMargin'}>rawHeightWithMargin</Link>
+                    </StyledNavigationLink>
+                    <StyledNavigationLink>
+                        <Link href={'/functions/width'}>width
                         </Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/topEdgeDistance'}>topEdgeDistance()</Link>
+                        <Link href={'/functions/rawWidth'}>rawWidth
+                        </Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/bottomEdgeDistance'}>bottomEdgeDistance()</Link>
+                        <Link href={'/functions/rawWidthWithMargin'}>rawWidthWithMargin
+                        </Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/leftEdgeDistance'}>leftEdgeDistance()</Link>
+                        <Link href={'/functions/topEdgeDistance'}>topEdgeDistance</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/rightEdgeDistance'}>rightEdgeDistance()</Link>
+                        <Link href={'/functions/bottomEdgeDistance'}>bottomEdgeDistance</Link>
                     </StyledNavigationLink>
                     <StyledNavigationLink>
-                        <Link href={'/functions/inViewport'}>inViewport()</Link>
+                        <Link href={'/functions/leftEdgeDistance'}>leftEdgeDistance</Link>
+                    </StyledNavigationLink>
+                    <StyledNavigationLink>
+                        <Link href={'/functions/rightEdgeDistance'}>rightEdgeDistance</Link>
+                    </StyledNavigationLink>
+                    <StyledNavigationLink>
+                        <Link href={'/functions/inViewport'}>inViewport</Link>
                     </StyledNavigationLink>
                 </div>
                 <StyledNavigationFooter sidebarStyle={props.sidebarStyle}>
