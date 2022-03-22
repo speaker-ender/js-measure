@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import ImageComponent from '../components/content/image';
-import { StyledImageGrid } from '../components/content/imageGrid.styles';
 import { StyledPanel } from '../global/panel.styles';
 import { Header2 } from '../global/typography';
 import { StyledPage } from '../global/page.styles';
@@ -12,7 +10,7 @@ const Home: NextPage = () => {
     <StyledPage>
       <Header2>JS Position Helpers</Header2>
       <StyledPanel>
-        <Paragraph text='Click an Image to See Its Calcuated Position' />
+        <Paragraph text='This package includes helper functions to querying the DOM more user friendly.' />
       </StyledPanel>
     </StyledPage>
   )

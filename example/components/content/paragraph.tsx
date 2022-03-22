@@ -9,7 +9,9 @@ interface IParagraphComponent extends IStyledContentItem {
 const ParagraphComponent: React.FC<IParagraphComponent> = (props) => {
 
     return (
-        <StyledParagraphContent {...props} dangerouslySetInnerHTML={{ __html: props.text || '' }} />
+        <StyledParagraphContent {...props}>
+            <p dangerouslySetInnerHTML={{ __html: props.text || '' }} />
+        </StyledParagraphContent>
     )
 }
 

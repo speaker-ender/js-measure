@@ -2,11 +2,8 @@ import type { NextPage } from 'next'
 import ImageComponent from '../components/content/image';
 import { StyledImageGrid } from '../components/content/imageGrid.styles';
 import { StyledPanel } from '../global/panel.styles';
-import { Header2, Header4 } from '../global/typography';
+import { Header2 } from '../global/typography';
 import { StyledPage } from '../global/page.styles';
-import { StyledGridItem } from '../components/grid.styles';
-import ImageGrid from '../components/content/imageGrid';
-import Grid from '../components/grid';
 import Paragraph from '../components/content/paragraph';
 
 const Demo: NextPage = () => {
@@ -15,8 +12,9 @@ const Demo: NextPage = () => {
         <StyledPage>
             <Header2>Demo</Header2>
             <StyledPanel>
-                <Paragraph text='Click an Image to See Its Calcuated Position' />
-                <Paragraph text='Click the Refresh button to refresh all calculations' />
+                <Paragraph text='Click on an image to measure it!' />
+                <Paragraph text='If you tap the bug in the bottom right corner, you will bring up the debug panel where you can see all of the DOM values.' />
+                <Paragraph text='You can also click the refresh button inside the debug panel to see if any of the values have changed.' />
             </StyledPanel>
             <StyledImageGrid columns={2}>
                 <ImageComponent isTargetElement={true} />
