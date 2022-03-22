@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Header3, Paragraph } from "../../global/typography";
+import { Header3 } from "../../global/typography";
+import Paragraph from '../content/paragraph';
 import { usePositionsState } from "../../hooks/usePositionsState";
 
 export interface IComponentPosition {
@@ -20,15 +21,15 @@ const ComponentPosition: React.FC = () => {
     return (
         <div>
             <Header3>Component Positions</Header3>
-            <Paragraph><b>height(): </b>{componentPosition.height}px</Paragraph>
-            <Paragraph><b>width(): </b>{componentPosition.width}px</Paragraph>
-            <Paragraph><b>topEdgeDistance(): </b>{componentPosition.topPosition}px</Paragraph>
-            <Paragraph><b>topEdgeDistance('document'): </b>{componentPosition.relativeTopPosition}px</Paragraph>
-            <Paragraph><b>rightEdgeDistance(): </b>{componentPosition.rightPosition}px</Paragraph>
-            <Paragraph><b>bottomEdgeDistance(): </b>{componentPosition.bottomPosition}px</Paragraph>
-            <Paragraph><b>bottomEdgeDistance('document'): </b>{componentPosition.relativeBottomPosition}px</Paragraph>
-            <Paragraph><b>leftEdgeDistance(): </b>{componentPosition.leftPosition}px</Paragraph>
-            <Paragraph><b>inViewport(): </b>{componentPosition.inViewport ? 'true' : 'false'}</Paragraph>
+            <Paragraph text={`height(): ${componentPosition.height}}px`} />
+            <Paragraph text={`width(): ${componentPosition.width}}px`} />
+            <Paragraph text={`topEdgeDistance(): ${componentPosition.topPosition}}px`} />
+            <Paragraph text={`topEdgeDistance('document'): ${componentPosition.relativeTopPosition}}px`} />
+            <Paragraph text={`rightEdgeDistance(): ${componentPosition.rightPosition}}px`} />
+            <Paragraph text={`bottomEdgeDistance(): ${componentPosition.bottomPosition}}px`} />
+            <Paragraph text={`bottomEdgeDistance('document): ${componentPosition.relativeBottomPosition}}px`} />
+            <Paragraph text={`leftEdgeDistance(): ${componentPosition.leftPosition}}px`} />
+            <Paragraph text={`inViewport(): ${componentPosition.inViewport ? 'true' : 'false'}}`} />
         </div>
     )
 }
