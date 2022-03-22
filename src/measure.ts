@@ -44,7 +44,7 @@ export const scrollTopDistance = () => {
 
 export const scrollLeftDistance = (element?: Element) => {
     return !!element ? element.scrollLeft : (typeof window !== 'undefined' && document && document.documentElement
-        ? window.pageYOffset || document.documentElement.scrollLeft
+        ? window.pageXOffset || document.documentElement.scrollLeft
         : 0);
 };
 
@@ -65,7 +65,7 @@ export const height = (element: Element, includeMargin?: boolean) => {
 };
 
 export const rawWidth = (element: Element) => {
-    return element.getBoundingClientRect().height;
+    return element.getBoundingClientRect().width;
 };
 
 export const rawWidthWithMargin = (element: Element) => {

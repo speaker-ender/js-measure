@@ -72,7 +72,7 @@ export const Header5 = styled.h5`
 
 export const ParagraphTextStyle = css`
     font-family: ${FONTS.secondary};
-    font-size: 1rem; 
+    font-size: 1rem;
 `
 
 export const Paragraph = styled.p`
