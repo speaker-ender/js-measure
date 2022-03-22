@@ -39,8 +39,8 @@ const DescriptionLayout: React.FC<IDescriptionLayout> = (props) => {
                 {props.functionName}({props.parameters && props.parameters.map((parameter, index, array) => `${parameter.name}: ${parameter.type}${index < array.length - 1 ? ', ' : ''}`)})
             </StyledCodeHeader></Header2>
             <StyledPanel>
-                {props.description.map((paragraph) => {
-                    return <Paragraph text={paragraph} />
+                {props.description.map((paragraph, index) => {
+                    return <Paragraph text={paragraph} key={index} />
                 })}
             </StyledPanel>
             {props.children}
