@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <StyledPage>
       <Header2>JS Measure</Header2>
       <StyledPanel>
-        <Paragraph text='This package includes helper functions to querying the DOM more user friendly.' />
+        <Paragraph text='This package includes helper functions for measuring DOM elements.' />
       </StyledPanel>
     </StyledPage>
   )
