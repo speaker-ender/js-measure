@@ -17,12 +17,12 @@ const PositionsContainer: React.FC = () => {
     }, [targetElement]);
 
     return (
-        <StyledPositionsContainer>
+        <>
             <WindowSize />
             <ScrollPosition />
             <ComponentPosition />
             <StyledButton onClick={() => refreshPositions()}>Refresh</StyledButton>
-        </StyledPositionsContainer>
+        </>
     )
 }
 

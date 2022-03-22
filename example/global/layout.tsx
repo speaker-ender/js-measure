@@ -1,39 +1,164 @@
 import * as React from "react";
 import Head from 'next/head';
-import { useState } from "react";
-import Header from "../components/header";
-import { StyledPage } from "./page.styles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme.styles";
 import { GlobalStyle } from "./global.styles";
+import { useSiteState } from "../hooks/useSiteState";
+import Overlay from "../components/overlay";
+import Alert from "../components/interface/alert";
+import LibraryLayout from "../components/layouts/site/library.layout";
+import AppLayout from "../components/layouts/site/app.layout";
+import OverlayLayout from "../components/layouts/site/overlay.layout";
+import DebugPanel from "../components/interface/debugPanel";
+import { useSiteRoutes } from "../hooks/useSiteRoutes";
+import dynamic from "next/dynamic";
+import { StyledNotificationTray, StyledNotificationWrapper } from "../components/interface/notificationTray.styles";
+import { useClientHook } from "@speaker-ender/react-ssr-tools";
+import PageTransition from "./pageTransition";
+import { Header2, Paragraph } from "./typography";
 import PositionsContainer from "../components/positions/positionsContainer";
 
+const DynamicBannerMessage = dynamic(() => import('../components/interface/bannerMessage'), {
+    ssr: false,
+});
+
+const DynamicPositionsContainer = dynamic(() => import('../components/positions/positionsContainer'), {
+    ssr: false,
+});
+
+const DynamicNotificationTray = dynamic(() => import('../components/interface/notificationTray'), {
+    ssr: false,
+    loading: () => <StyledNotificationTray><StyledNotificationWrapper /></StyledNotificationTray>
+});
 
 const Layout: React.FC = ({ children }) => {
-    const [navOpen, setNavOpen] = useState(false);
+    const isClient = useClientHook();
+    const { themeStyle, setThemeStyle } = useSiteState();
+    useSiteRoutes();
 
-    const updateNavOpen = React.useCallback((newNavState?: boolean) => {
-        console.log('trying to change nav state');
-        setNavOpen(newNavState || !navOpen);
-    }, [navOpen, setNavOpen]);
+    React.useEffect(() => {
+        if (!!isClient) {
+            const root = window.document.documentElement;
+            const initialColorValue = root.style.getPropertyValue(
+                '--initial-color-mode'
+            );
+
+            !!initialColorValue && setThemeStyle(initialColorValue);
+        }
+    }, [isClient]);
 
     return (
-        <ThemeProvider theme={theme}>
-            <div className="container">
+        <>
+            <ThemeProvider theme={{ ...theme, themeStyle: themeStyle }}>
+                <style jsx global>
+                    {`
+                    @font-face {
+                        font-family: "Orbitron";
+                        src: url("/fonts/Orbitron-Medium.ttf") format('truetype');
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                    }
+                    @font-face {
+                        font-family: "OrbitronBold";
+                        src: url("/fonts/Orbitron-Black.ttf") format('truetype');
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                    }
+                    @font-face {
+                        font-family: "WorkSans";
+                        src: url("/fonts/WorkSans-Medium.ttf") format('truetype');
+                        font-style: bold;
+                        font-weight: 400;
+                        font-display: swap;
+                    }
+                    @font-face {
+                        font-family: "WorkSansBold";
+                        src: url("/fonts/WorkSans-Bold.ttf") format('truetype');
+                        font-style: bold;
+                        font-weight: 600;
+                        font-display: swap;
+                    }
+                    @font-face {
+                        font-family: "SourceCodePro";
+                        src: url("fonts/SourceCodePro-Regular.ttf") format('truetype');
+                        font-style: bold;
+                        font-weight: 400;
+                        font-display: swap;
+                    }
+                    @font-face {
+                        font-family: "SourceCodeProBold";
+                        src: url("/fonts/SourceCodePro-SemiBold.ttf") format('truetype');
+                        font-style: bold;
+                        font-weight: 600;
+                        font-display: swap;
+                    }
+                    `}
+                </style>
                 <GlobalStyle />
                 <Head>
-                    <title>JS Positions</title>
-                    <link rel="icon" href="/favicon.ico" />
+                    <title>Next.JS Starter</title>
+                    <link rel="icon" href="/logo.svg" />
+                    <link
+                        rel="preload"
+                        href="/fonts/Orbitron-Medium.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/Orbitron-Black.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/WorkSans-Medium.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/WorkSans-Regular.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/SourceCodePro-Regular.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/SourceCodePro-SemiBold.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
                 </Head>
                 <main>
-                    <Header updateNavOpen={updateNavOpen} />
-                    <StyledPage>
+                    <LibraryLayout>
                         {children}
-                    </StyledPage>
-                    <PositionsContainer />
+                    </LibraryLayout>
                 </main>
-            </div>
-        </ThemeProvider>
+                <OverlayLayout sidebarStyle={true}>
+                    <DebugPanel>
+                        <DynamicPositionsContainer />
+                    </DebugPanel>
+                    <DynamicNotificationTray />
+                    <DynamicBannerMessage />
+                    <Overlay />
+                </OverlayLayout>
+            </ThemeProvider>
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledPositionsContainer = styled.div`
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     right: 0;
     padding: 25px 50px;
@@ -13,5 +13,5 @@ export const StyledPositionsContainer = styled.div`
     backdrop-filter: blur(15px);
     color: var(--text);
     border-radius: ${p => p.theme.rounding.borderRadius};
-    overflow-y: scroll;
+    overflow-y: scroll; */
 `;

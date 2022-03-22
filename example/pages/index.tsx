@@ -1,9 +1,13 @@
 import type { NextPage } from 'next'
-import ImageComponent from '../components/image';
-import { StyledImageGrid } from '../components/imageGrid.styles';
-import { StyledPanel } from '../components/panel.styles';
-import { Header4, Paragraph } from '../global/typography';
+import ImageComponent from '../components/content/image';
+import { StyledImageGrid } from '../components/content/imageGrid.styles';
+import { StyledPanel } from '../global/panel.styles';
+import { Header4 } from '../global/typography';
 import { StyledPage } from '../global/page.styles';
+import { StyledGridItem } from '../components/grid.styles';
+import ImageGrid from '../components/content/imageGrid';
+import Grid from '../components/grid';
+import Paragraph from '../components/content/paragraph';
 
 const Home: NextPage = () => {
 
@@ -11,8 +15,8 @@ const Home: NextPage = () => {
     <StyledPage>
       <StyledPanel>
         <Header4>Directions</Header4>
-        <Paragraph>Click an Image to See It&aposs Calcuated Position</Paragraph>
-        <Paragraph>Click the &aposRefresh&apos button to refresh all calculations</Paragraph>
+        <Paragraph text='Click an Image to See Its Calcuated Position' />
+        <Paragraph text='Click the Refresh button to refresh all calculations' />
       </StyledPanel>
       <StyledImageGrid columns={2}>
         <ImageComponent isTargetElement={true} />

@@ -48,12 +48,36 @@ export const scrollLeftDistance = (element?: Element) => {
         : 0);
 };
 
-export const height = (element: Element) => {
+export const rawHeight = (element: Element) => {
     return element.getBoundingClientRect().height;
 };
 
-export const width = (element: Element) => {
-    return element.getBoundingClientRect().width;
+export const rawHeightWithMargin = (element: Element) => {
+    const styles = window.getComputedStyle(element);
+    const margin = parseFloat(styles['marginTop']) +
+        parseFloat(styles['marginBottom']);
+
+    return rawHeight(element) + margin;
+}
+
+export const height = (element: Element, includeMargin?: boolean) => {
+    return includeMargin ? rawHeightWithMargin(element) : rawHeight(element);
+};
+
+export const rawWidth = (element: Element) => {
+    return element.getBoundingClientRect().height;
+};
+
+export const rawWidthWithMargin = (element: Element) => {
+    const styles = window.getComputedStyle(element);
+    const margin = parseFloat(styles['marginLeft']) +
+        parseFloat(styles['marginRight']);
+
+    return rawHeight(element) + margin;
+}
+
+export const width = (element: Element, includeMargin?: boolean) => {
+    return includeMargin ? rawWidthWithMargin(element) : rawWidth(element);;
 };
 
 export const topEdgeDistance = (element: Element, relativeTo: ('viewport' | 'document' | Element) = 'viewport') => {

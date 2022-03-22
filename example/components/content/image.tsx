@@ -1,9 +1,9 @@
 import * as React from "react";
 import Image from 'next/image';
-import enderImage from '../public/ender-trace-best-small.svg'
+import enderImage from '../../public/ender-trace-best-small.svg'
 import { StyledImage } from "./image.styles";
 import { useEffect, useRef } from "react";
-import { usePositionsState } from "../hooks/usePositionsState";
+import { usePositionsState } from "../../hooks/usePositionsState";
 
 interface IImageComponent {
     isTargetElement?: boolean;

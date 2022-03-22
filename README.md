@@ -26,10 +26,10 @@ Returns `0` if the window and document element do not exist
 Fetches the distance of the viewport from the left of the page or the distance of the left side of `element` from the left side of the viewport.  
 Returns `0` if the window and document element do not exist
 
-### `height(element)`
+### `height(element, includeMargin)`
 Fetches the height of the element passed to the function
 
-### `height(element)`
+### `height(element, includeMargin)`
 Fetches the width of the element passed to the function
 
 ### `topEdgeDistance(element: Element, relativeTo?: 'document' | Element)`
