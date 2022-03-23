@@ -19,8 +19,8 @@
     "zustand": "^3.7.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/react": "^17.0.40",
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.42",
     "@types/react-dom": "^17.0.13",
     "@types/react-transition-group": "^4.4.4",
     "@types/styled-components": "^5.1.24",
