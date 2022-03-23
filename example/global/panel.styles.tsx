@@ -15,4 +15,5 @@ export const PanelStyles = css`
 export const StyledPanel = styled.div<IStyledPanel>`
     ${PanelStyles}
     ${ContentBackgroundStyles}
+    color: ${p => p.theme.themeProps.text};
 `;

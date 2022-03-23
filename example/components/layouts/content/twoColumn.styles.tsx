@@ -9,7 +9,7 @@ export interface IStyledGrid {
 
 export const TwoColumnStyles = css<IStyledGrid>`
     display: grid;
-    grid-template-columns: repeat(1, [col-start] 1fr [col-end]);
+    grid-template-columns: [col-start] 1fr [col-end];
     column-gap: ${p => p.columnGap ? p.columnGap : p.theme.spacingProps.defaultSpacing};
     row-gap: ${p => p.rowGap ? p.rowGap : p.theme.spacingProps.defaultSpacing};
     align-content: center;
@@ -30,11 +30,17 @@ export const StyledTwoColumns = styled(StyledContentItem) <IStyledGrid>`
     ${TwoColumnStyles}
 
     & > ${StyledContentItem} {
-        grid-column-start: col-start;
-        grid-column-end: span 1;
+        grid-column: 1 / span 1;
+
+        @media ${media.tablet} {
+            grid-column-start: col-start;
+            grid-column-end: span 1;
+        }
 
         &:nth-of-type(2) {
-        grid-column-start: col-start 2;
+            @media ${media.tablet} {
+                grid-column-start: col-start 2;
+            }
         }
     }
 `;

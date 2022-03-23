@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { transition } from "../../global/animation.styles";
+import { StyledContentItem } from "../layouts/content/contentItem.styles";
 
 interface IStyledImage {
     isTarget?: boolean;
 }
 
-export const StyledImage = styled.div<IStyledImage>`
+export const StyledImage = styled(StyledContentItem) <IStyledImage>`
     position: relative;
     width: 100%;
     height: 100%;

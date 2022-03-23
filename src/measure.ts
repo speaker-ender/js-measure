@@ -61,6 +61,7 @@ export const rawHeightWithMargin = (element: Element) => {
 }
 
 export const height = (element: Element, includeMargin?: boolean) => {
+
     return includeMargin ? rawHeightWithMargin(element) : rawHeight(element);
 };
 

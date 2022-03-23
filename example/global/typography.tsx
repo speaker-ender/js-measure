@@ -118,3 +118,7 @@ export const StyledLabel = styled.label`
     width: 0px;
     height: 0px;
 `
+
+export const StyledVisibleLabel = styled.label`
+    ${SmallTextStyle}
+`

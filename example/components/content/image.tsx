@@ -22,7 +22,7 @@ const ImageComponent: React.FC<IImageComponent> = (props) => {
 
     return (
         <StyledImage ref={imageRef} onClick={() => imageRef.current && updateTargetElement(imageRef.current)} isTarget={imageRef.current === targetElement}>
-            <Image src={enderImage} layout="responsive"></Image>
+            <Image src={enderImage} layout="fill" objectFit="cover"></Image>
         </StyledImage>
     )
 }
