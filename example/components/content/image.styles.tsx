@@ -6,7 +6,7 @@ interface IStyledImage {
     isTarget?: boolean;
 }
 
-export const StyledImage = styled(StyledContentItem) <IStyledImage>`
+export const StyledImage = styled.div<IStyledImage>`
     position: relative;
     width: 100%;
     height: 100%;
