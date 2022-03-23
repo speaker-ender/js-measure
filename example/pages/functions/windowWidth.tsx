@@ -4,7 +4,7 @@ import DescriptionLayout from '../../components/layouts/documentation/descriptio
 const WindowWidth: NextPage = () => {
 
     return (
-        <DescriptionLayout functionName='windowHeight' description={[
+        <DescriptionLayout functionName='windowWidth' description={[
             'Fetches the width of the window.',
             'Returns `0` if the window and document element do not exist.'
         ]} />
