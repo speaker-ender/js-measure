@@ -37,7 +37,7 @@ interface ISiteState {
     dismissNotification: (notification: INotification) => void;
 }
 
-export const useSiteState = create<ISiteState>(persist((set, get) => ({
+export const useSiteState = create(persist<ISiteState>((set, get) => ({
     _hasHydrated: false,
     setHasHydrated: (state) => {
         set({
