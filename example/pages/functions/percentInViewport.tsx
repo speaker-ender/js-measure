@@ -6,7 +6,7 @@ import FunctionDemo from "../../components/positions/functionDemo";
 const PercentInViewport: NextPage = () => {
   return (
     <DescriptionLayout
-      functionName="inViewport"
+      functionName="percentInViewport"
       parameters={[
         {
           name: "element",
