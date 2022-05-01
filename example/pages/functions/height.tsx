@@ -13,13 +13,13 @@ const Height: NextPage = () => {
           type: "Element",
         },
         {
-          name: "rect",
-          type: "DOMRect",
+          name: "includeMargin",
+          type: "boolean",
           optional: true,
         },
         {
-          name: "includeMargin",
-          type: "boolean",
+          name: "rect",
+          type: "DOMRect",
           optional: true,
         },
       ]}
