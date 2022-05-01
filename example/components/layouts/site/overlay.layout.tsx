@@ -31,17 +31,18 @@ import { StyledOverlayLayout } from "./overlay.layout.styles";
 // |___Footer_|
 
 export interface IOverlayLayout extends ILayoutProps {
-    sidebarStyle?: boolean;
+  sidebarStyle?: boolean;
 }
 
-
-const OverlayLayout: React.FC<IOverlayLayout> = ({ children, sidebarStyle }) => {
-
-    return (
-        <StyledOverlayLayout sidebarStyle={sidebarStyle}>
-            {children}
-        </StyledOverlayLayout>
-    )
-}
+const OverlayLayout: React.FC<IOverlayLayout> = ({
+  children,
+  sidebarStyle,
+}) => {
+  return (
+    <StyledOverlayLayout sidebarStyle={sidebarStyle}>
+      {children}
+    </StyledOverlayLayout>
+  );
+};
 
 export default OverlayLayout;

@@ -5,10 +5,13 @@ const nextConfig = {
   experimental: {
     externalDir: true,
     concurrentFeatures: true,
+    reactRoot: true,
+    runtime: 'nodejs',
+    serverComponents: true,
   },
   compiler: {
     styledComponents: true,
-  }
+  },
 }
 
 module.exports = nextConfig

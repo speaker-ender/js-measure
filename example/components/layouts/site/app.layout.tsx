@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ILayoutProps } from "..";
 import PageTransition from "../../../global/pageTransition";
 import { useSiteState } from "../../../hooks/useSiteState";
 import Footer from "../../interface/footer";
@@ -21,23 +22,19 @@ import { StyledAppLayout } from "./app.layout.styles";
 // |               Footer                  |
 // |_______________________________________|
 
+const AppLayout: React.FC<ILayoutProps> = (props) => {
+  const { overlayActive } = useSiteState();
 
-
-const AppLayout: React.FC = (props) => {
-    const { overlayActive } = useSiteState();
-
-    return (
-        <StyledAppLayout>
-            <Header />
-            <Navigation />
-            <PageTransition>
-                <ContentLayout>
-                    {props.children}
-                </ContentLayout>
-            </PageTransition>
-            <Footer />
-        </StyledAppLayout>
-    )
-}
+  return (
+    <StyledAppLayout>
+      <Header />
+      <Navigation />
+      <PageTransition>
+        <ContentLayout>{props.children}</ContentLayout>
+      </PageTransition>
+      <Footer />
+    </StyledAppLayout>
+  );
+};
 
 export default AppLayout;

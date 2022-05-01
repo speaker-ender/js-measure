@@ -1,2 +1,3 @@
-
-export interface ILayoutProps { }
+export interface ILayoutProps {
+  children?: React.ReactNode;
+}

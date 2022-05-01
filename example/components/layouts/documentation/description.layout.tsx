@@ -20,34 +20,42 @@ import Paragraph from "../../content/paragraph";
 // |_______________________________________|
 
 export type parameter = {
-    name: string,
-    type: string,
-    optional?: boolean,
-    defaultValue?: string,
-    description?: string,
-}
+  name: string;
+  type: string;
+  optional?: boolean;
+  defaultValue?: string;
+  description?: string;
+};
 export interface IDescriptionLayout extends ILayoutProps {
-    functionName: string;
-    parameters?: parameter[];
-    description: string[];
+  functionName: string;
+  parameters?: parameter[];
+  description: string[];
 }
-
 
 const DescriptionLayout: React.FC<IDescriptionLayout> = (props) => {
-
-    return (
-        <StyledPage>
-            <Header2><StyledCodeHeader>
-                {props.functionName}({props.parameters && props.parameters.map((parameter, index, array) => `${parameter.name}${parameter.optional ? '?' : ''}: ${parameter.type}${index < array.length - 1 ? ', ' : ''}`)})
-            </StyledCodeHeader></Header2>
-            <StyledPanel>
-                {props.description.map((paragraph, index) => {
-                    return <Paragraph text={paragraph} key={index} />
-                })}
-            </StyledPanel>
-            {props.children}
-        </StyledPage>
-    )
-}
+  return (
+    <StyledPage>
+      <Header2>
+        <StyledCodeHeader>
+          {props.functionName}(
+          {props.parameters &&
+            props.parameters.map(
+              (parameter, index, array) =>
+                `${parameter.name}${parameter.optional ? "?" : ""}: ${
+                  parameter.type
+                }${index < array.length - 1 ? ", " : ""}`
+            )}
+          )
+        </StyledCodeHeader>
+      </Header2>
+      <StyledPanel>
+        {props.description.map((paragraph, index) => {
+          return <Paragraph text={paragraph} key={index} />;
+        })}
+      </StyledPanel>
+      {props.children}
+    </StyledPage>
+  );
+};
 
 export default DescriptionLayout;
