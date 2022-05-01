@@ -1,61 +1,65 @@
-import type { NextPage } from 'next'
-import { height } from '../../../src/measure';
-import DescriptionLayout from '../../components/layouts/documentation/description.layout';
-import FunctionDemo from '../../components/positions/functionDemo';
+import type { NextPage } from "next";
+import { height } from "../../../src/measure";
+import DescriptionLayout from "../../components/layouts/documentation/description.layout";
+import FunctionDemo from "../../components/positions/functionDemo";
 
 const Height: NextPage = () => {
-
   return (
     <DescriptionLayout
-      functionName='height'
+      functionName="height"
       parameters={[
         {
-          name: 'element',
-          type: 'Element'
+          name: "element",
+          type: "Element",
         },
         {
-          name: 'includeMargin',
-          type: 'boolean',
+          name: "rect",
+          type: "DOMRect",
           optional: true,
-        }
+        },
+        {
+          name: "includeMargin",
+          type: "boolean",
+          optional: true,
+        },
       ]}
-      description={[
-        'Fetches the height of the element passed to the function'
-      ]}
+      description={["Fetches the height of the element passed to the function"]}
     >
       <FunctionDemo
         name="height"
         testCallback={(element, includeMargin) => {
-          return element ? `${height(element, includeMargin)}px` : ''
+          return element ? `${height(element, includeMargin)}px` : "";
         }}
-        parameters={[{
-          name: 'includeMargin',
-          type: 'boolean',
-          value: false,
-        }]}
+        parameters={[
+          {
+            name: "includeMargin",
+            type: "boolean",
+            value: false,
+          },
+        ]}
         cssControls={[
           {
-            label: 'Margin',
-            prop: 'margin',
-            unit: 'px',
-            value: { margin: '' }
+            label: "Margin",
+            prop: "margin",
+            unit: "px",
+            value: { margin: "" },
           },
           {
-            label: 'Height',
-            prop: 'height',
-            unit: 'px',
-            value: { height: 'auto' }
+            label: "Height",
+            prop: "height",
+            unit: "px",
+            value: { height: "auto" },
           },
           {
-            label: 'Width',
-            prop: 'width',
-            unit: 'px',
-            value: { width: 'auto' }
-          }
+            label: "Width",
+            prop: "width",
+            unit: "px",
+            value: { width: "auto" },
+          },
         ]}
       />
     </DescriptionLayout>
-  )
-}
+  );
+};
 
-export default Height
+export default Height;

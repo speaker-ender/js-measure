@@ -1,16 +1,21 @@
+import { percentInViewport } from "@speaker-ender/js-measure";
 import type { NextPage } from "next";
-import { rawHeightWithMargin } from "../../../src/measure";
 import DescriptionLayout from "../../components/layouts/documentation/description.layout";
 import FunctionDemo from "../../components/positions/functionDemo";
 
-const RawHeightWithMargin: NextPage = () => {
+const PercentInViewport: NextPage = () => {
   return (
     <DescriptionLayout
-      functionName="rawHeightWithMargin"
+      functionName="inViewport"
       parameters={[
         {
           name: "element",
           type: "Element",
+        },
+        {
+          name: "viewportHeight",
+          type: "number",
+          optional: true,
         },
         {
           name: "rect",
@@ -19,13 +24,13 @@ const RawHeightWithMargin: NextPage = () => {
         },
       ]}
       description={[
-        "This is the raw height with margin function for maximum performance",
+        "Returns the percent of the element that is visible in the viewport",
       ]}
     >
       <FunctionDemo
-        name="rawHeightWithMargin"
+        name="inViewport"
         testCallback={(element) => {
-          return element ? `${rawHeightWithMargin(element)}px` : "";
+          return element ? `${percentInViewport(element)}` : "";
         }}
         cssControls={[
           {
@@ -52,4 +57,4 @@ const RawHeightWithMargin: NextPage = () => {
   );
 };
 
-export default RawHeightWithMargin;
+export default PercentInViewport;
