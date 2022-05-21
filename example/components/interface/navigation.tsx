@@ -5,6 +5,8 @@ import { useSiteState } from "../../hooks/useSiteState";
 import Drawer from "../content/drawer";
 import { RawInvertTheme } from "../invertTheme";
 import {
+  StyledNavGithub,
+  StyledNavGithubLink,
   StyledNavigation,
   StyledNavigationContent,
   StyledNavigationFooter,
@@ -15,6 +17,10 @@ import {
 const DynamicInvertTheme = dynamic(() => import("../invertTheme"), {
   ssr: false,
   loading: () => <RawInvertTheme />,
+});
+
+const DynamicGithub = dynamic(() => import("../../assets/github.svg"), {
+  ssr: false,
 });
 
 interface INavigation {
@@ -28,9 +34,6 @@ const Navigation: React.FC<INavigation> = (props) => {
     <StyledNavigation sidebarStyle={props.sidebarStyle} open={navOpen}>
       <StyledNavigationContent sidebarStyle={props.sidebarStyle} open={navOpen}>
         <div>
-          <StyledNavigationLink>
-            <Link href={"/demo"}>Demo</Link>
-          </StyledNavigationLink>
           <StyledNavigationHeader>Functions</StyledNavigationHeader>
           <StyledNavigationLink>
             <Link href={"/functions/documentHeight"}>documentHeight</Link>
@@ -94,6 +97,14 @@ const Navigation: React.FC<INavigation> = (props) => {
         </div>
         <StyledNavigationFooter sidebarStyle={props.sidebarStyle}>
           <DynamicInvertTheme />
+          <StyledNavGithub>
+            <DynamicGithub />
+            <StyledNavGithubLink
+              href={"https://github.com/speaker-ender/js-measure"}
+              target="_blank"
+              rel="noreferrer"
+            />
+          </StyledNavGithub>
         </StyledNavigationFooter>
       </StyledNavigationContent>
     </StyledNavigation>
