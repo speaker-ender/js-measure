@@ -11,13 +11,15 @@ const Home: NextPage = () => {
     <StyledPage>
       <Header2>JS Measure</Header2>
       <StyledPanel>
-        <Paragraph text="This package includes helper functions for measuring DOM elements." />
+        <Paragraph text="Querying the DOM can become cumbersome and unweildy 😢" />
+        <Paragraph text="JS-Measure seeks to solve this by abstracting common queries into easy to use functions." />
+        <Paragraph text="Now you no longer have to worry about things like: making sure the Window exists, supporting legacy DOM queries, and accounting for element margins." />
       </StyledPanel>
       <Header2>Demo</Header2>
       <StyledPanel>
         <Paragraph text="Click on an image to measure it!" />
         <Paragraph text="If you tap the bug in the bottom right corner, you will bring up the debug panel where you can see all of the DOM values." />
-        <Paragraph text="You can also click the refresh button inside the debug panel to see if any of the values have changed." />
+        <Paragraph text="You can also click the refresh button inside the debug panel to manually update the values." />
       </StyledPanel>
       <StyledImageGrid columns={2}>
         <ImageComponent isTargetElement={true} />

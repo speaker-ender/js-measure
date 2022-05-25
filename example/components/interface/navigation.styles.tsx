@@ -81,6 +81,10 @@ export const StyledNavigationLink = styled.div`
   }
 `;
 
+export const StyledNavigationContentWrapper = styled.div`
+  word-break: break-word;
+`;
+
 export const StyledNavigationContent = styled.div<IStyledNavigation>`
   grid-area: navigation;
   position: absolute;
@@ -133,8 +137,10 @@ export const StyledNavGithub = styled.div`
   position: relative;
   height: 2rem;
   width: 2rem;
+  grid-column: 2;
+  grid-row: 2;
   align-self: center;
-  justify-self: center;
+  justify-self: start;
 
   svg {
     transform: translate3d(0, 0, 0);
@@ -144,7 +150,10 @@ export const StyledNavGithub = styled.div`
 export const StyledNavigationFooter = styled.div<IStyledNavigation>`
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0 1fr 1fr 0;
+  grid-template-rows: repeat(3, min-content);
+  grid-column-gap: ${(p) => p.theme.spacingProps.defaultSpacing};
+  grid-row-gap: calc(${(p) => p.theme.spacingProps.textSpacingX});
 
   @media ${media.tablet} {
     ${(p) => p.sidebarStyle && InterfaceBackgroundStyles};
@@ -157,7 +166,19 @@ export const StyledNavigationFooter = styled.div<IStyledNavigation>`
   }
 
   & ${StyledInvertThemeButton} {
-    padding: ${(p) =>
-      `calc(${p.theme.spacingProps.defaultSpacing}) calc(${p.theme.spacingProps.defaultSpacing})`};
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
+
+    svg {
+      max-height: none;
+      max-width: none;
+      height: 100%;
+      width: 100%;
+    }
   }
 `;

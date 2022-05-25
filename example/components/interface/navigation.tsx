@@ -9,6 +9,7 @@ import {
   StyledNavGithubLink,
   StyledNavigation,
   StyledNavigationContent,
+  StyledNavigationContentWrapper,
   StyledNavigationFooter,
   StyledNavigationHeader,
   StyledNavigationLink,
@@ -33,7 +34,7 @@ const Navigation: React.FC<INavigation> = (props) => {
   return (
     <StyledNavigation sidebarStyle={props.sidebarStyle} open={navOpen}>
       <StyledNavigationContent sidebarStyle={props.sidebarStyle} open={navOpen}>
-        <div>
+        <StyledNavigationContentWrapper>
           <StyledNavigationHeader>Functions</StyledNavigationHeader>
           <StyledNavigationLink>
             <Link href={"/functions/documentHeight"}>documentHeight</Link>
@@ -94,7 +95,7 @@ const Navigation: React.FC<INavigation> = (props) => {
           <StyledNavigationLink>
             <Link href={"/functions/percentInViewport"}>percentInViewport</Link>
           </StyledNavigationLink>
-        </div>
+        </StyledNavigationContentWrapper>
         <StyledNavigationFooter sidebarStyle={props.sidebarStyle}>
           <DynamicInvertTheme />
           <StyledNavGithub>
