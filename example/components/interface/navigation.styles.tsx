@@ -41,7 +41,7 @@ export const StyledNavigation = styled.div<IStyledNavigation>`
   z-index: ${LAYERS.navigation};
   overflow: hidden;
 
-  @media ${media.tablet} {
+  @media ${media.tabletLandscape} {
     position: ${(p) => (p.sidebarStyle ? "sticky" : "fixed")};
     top: ${(p) => (p.sidebarStyle ? p.theme.spacingProps.headerHeight : "")};
     height: ${(p) =>
@@ -95,7 +95,7 @@ export const StyledNavigationContent = styled.div<IStyledNavigation>`
   overflow-y: scroll;
   overflow-x: hidden;
 
-  @media ${media.tablet} {
+  @media ${media.tabletLandscape} {
     display: ${(p) => (p.sidebarStyle ? "grid" : "")};
     position: ${(p) => (p.sidebarStyle ? "relative" : "absolute")};
     ${(p) => p.sidebarStyle && ScrollbarStyles};
@@ -109,7 +109,7 @@ export const StyledNavigationContent = styled.div<IStyledNavigation>`
   & ${StyledDrawerContentWrapper}, & ${StyledDrawerContent} {
     pointer-events: ${(p) => (p.open ? "" : "none")};
 
-    @media ${media.tablet} {
+    @media ${media.tabletLandscape} {
       pointer-events: ${(p) => (p.open || p.sidebarStyle ? "auto" : "none")};
     }
   }
@@ -155,7 +155,7 @@ export const StyledNavigationFooter = styled.div<IStyledNavigation>`
   grid-column-gap: ${(p) => p.theme.spacingProps.defaultSpacing};
   grid-row-gap: calc(${(p) => p.theme.spacingProps.textSpacingX});
 
-  @media ${media.tablet} {
+  @media ${media.tabletLandscape} {
     ${(p) => p.sidebarStyle && InterfaceBackgroundStyles};
     position: ${(p) => (p.sidebarStyle ? "sticky" : "")};
     bottom: 0px;
