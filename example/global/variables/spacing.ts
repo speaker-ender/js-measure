@@ -3,11 +3,6 @@ import { screenSize } from "./breakpoints";
 
 export type IPropUnit = 'px' | 'vh' | 'vw' | '%';
 
-type ISpacingProp = {
-    value: string;
-    unit: IPropUnit;
-}
-
 export type ISpacingProps = {
     [P in keyof typeof screenSize]: string;
 }

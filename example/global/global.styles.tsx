@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
  :root {
   @media ${media.tablet} {
       font-size: 21px;
-
     }
 
     @media ${media.desktop} {

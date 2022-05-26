@@ -115,7 +115,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
         </style>
         <GlobalStyle />
         <Head>
-          <title>JS Measure</title>
+          <title>JS Measure | Docs</title>
           <link rel="icon" href="/logo.svg" />
           <link
             rel="preload"
@@ -163,6 +163,18 @@ const Layout: React.FC<ILayout> = ({ children }) => {
             name="viewport"
             content="initial-scale=1, viewport-fit=cover"
           ></meta>
+          <meta charSet="utf-8" />
+          <meta property="og:title" content="JS Measure" />
+          <meta
+            property="og:description"
+            content="Documentation for the JS Measure Package by 3nder"
+          />
+          <meta property="og:type" content="website" />
+          <meta name="author" content="Ender" />
+          <meta
+            name="description"
+            content="Documentation for the JS Measure Package by 3nder"
+          />
         </Head>
         <main>
           <LibraryLayout>{children}</LibraryLayout>
