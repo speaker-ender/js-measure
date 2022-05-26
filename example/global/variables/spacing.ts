@@ -22,12 +22,13 @@ export const SPACING = {
         tablet: '25px'
     } as ISpacingProps,
     pageGridGutters: {
-        mobile: '40px',
-        desktop: '15vw',
-    } as ISpacingProps,
+        mobile: '1rem',
+        tabletLandscape: '2rem',
+        desktop: '5vw',
+        desktopLarge: '10vw',
+      } as ISpacingProps,
     defaultSpacing: {
-        mobile: '25px',
-        desktop: '35px',
+        mobile: '1.2rem',
     } as ISpacingProps,
     textSpacingX: {
         mobile: '25px',
@@ -39,8 +40,7 @@ export const SPACING = {
         desktop: '0.5rem',
     } as ISpacingProps,
     headerHeight: {
-        mobile: '116px',
-        desktop: '116px',
+        mobile: '5.06rem',
     } as ISpacingProps,
 } as const;
 

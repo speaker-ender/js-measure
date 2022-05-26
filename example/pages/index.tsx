@@ -49,10 +49,6 @@ const Home: NextPage = () => {
           <ImageComponent />
         </StyledImageGrid>
       </StyledImageGrid>
-      <StyledImageGrid columns={1}>
-        <ImageComponent />
-        <ImageComponent />
-      </StyledImageGrid>
     </StyledPage>
   );
 };
