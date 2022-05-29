@@ -32,13 +32,14 @@ const getElementPositions = (element: HTMLElement | null) => {
     return {
         height: element ? measure.height(element) : 0,
         width: element ? measure.width(element) : 0,
-        topPosition: element ? measure.topEdgeDistance(element) : 0,
-        relativeTopPosition: element ? measure.topEdgeDistance(element, 'document') : 0,
-        rightPosition: element ? measure.rightEdgeDistance(element) : 0,
-        bottomPosition: element ? measure.bottomEdgeDistance(element) : 0,
-        relativeBottomPosition: element ? measure.bottomEdgeDistance(element, 'document') : 0,
-        leftPosition: element ? measure.leftEdgeDistance(element) : 0,
+        topEdgeDistanceViewport: element ? measure.topEdgeDistance(element) : 0,
+        topEdgeDistanceDocument: element ? measure.topEdgeDistance(element, 'document') : 0,
+        rightEdgeDistance: element ? measure.rightEdgeDistance(element) : 0,
+        bottomEdgeDistanceViewport: element ? measure.bottomEdgeDistance(element) : 0,
+        bottomEdgeDistanceDocument: element ? measure.bottomEdgeDistance(element, 'document') : 0,
+        leftEdgeDistance: element ? measure.leftEdgeDistance(element) : 0,
         inViewport: element ? measure.inViewport(element) : false,
+        percentInViewport: element ? measure.percentInViewport(element) : 0,
     }
 }
 

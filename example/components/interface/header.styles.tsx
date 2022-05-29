@@ -1,4 +1,4 @@
-import { Header2, Header2Style, Header3Style } from "../../global/typography";
+import { Header2 } from "../../global/typography";
 import styled, { css } from "styled-components";
 import { LAYERS } from "../../global/variables/layers";
 import { LinkStyles } from "../../global/link.styles";
