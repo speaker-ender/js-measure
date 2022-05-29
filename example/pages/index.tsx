@@ -9,7 +9,7 @@ import ImageComponent from "../components/content/image";
 const Home: NextPage = () => {
   return (
     <StyledPage>
-      <Header2>JS Measure</Header2>
+      <Header2>📐 JS Measure</Header2>
       <StyledPanel>
         <Paragraph text="Querying the DOM can become cumbersome and unweildy 😢" />
         <Paragraph text="JS-Measure seeks to solve this by abstracting common queries into easy to use functions." />

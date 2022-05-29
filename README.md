@@ -1,4 +1,4 @@
-# JS-Measure
+# 📐 JS-Measure
 
 ### [Docs](https://js-measure.3nder.io)  
 

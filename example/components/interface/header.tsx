@@ -28,7 +28,7 @@ const Header: React.FC<IHeader> = (props) => {
   return (
     <StyledHeader>
       <StyledHeaderTitle>
-        <Link href={"/"}>JS.M</Link>
+        <Link href={"/"}>📐</Link>
       </StyledHeaderTitle>
       <StyledHam isOpen={navOpen} onClick={() => handleClick()}>
         <StyledHamPart />
